@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fastest and Easiest way to secure your text 🔒">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blocks.css">
+    <title>ENCDEC</title>
+</head>
+<body>
+<!--Main Block-->
+<div class="main-div block fixed">
+    <!--Heading Block-->
+    <div class="head block fixed">
+        <h1>ENCDEC</h1>
+    </div>
+    <!--Header Buttons-->
+    <div class="head-btns" id="head-btns-id">
+        <button class="enc-switch block" id="enc-switch-id" onclick="encview()">Encryption 🔒</button>
+        <button class="dec-switch block" id="dec-switch-id" onclick="decview()">Decryption 🔓</button>
+    </div>
+    <!--Encryption Block-->
+    <div class="enc-main block fixed" id="enc-main-id">
+        <h3>Encryption</h3>
+        <textarea class="enc-text block fixed" id="ecn-text-id" rows="4" cols="50" placeholder="Original text..."></textarea>
+        <input type="text" class="enc-key block fixed" maxlength="10" id="enc-key-id" placeholder="Secret Key">
+        <button class="enc-submit-btn block" id="enc-submit-btn-id" onclick="encrypt()">Encrypt</button>
+        <textarea class="enc-output block fixed" id="enc-output-id" readonly rows="4" cols="50" placeholder="Encrypted text..."></textarea>
+    </div>
+    <!--Decryption Block-->
+    <div class="dec-main block fixed" id="dec-main-id">
+        <h3>Decryption</h3>
+        <textarea class="dec-text block fixed" id="dec-text-id" rows="4" cols="50" placeholder="Encrypted text..."></textarea>
+        <input type="text" class="dec-key block fixed" maxlength="10" id="dec-key-id" placeholder="Secret Key">
+        <button class="dec-submit-btn block" id="dec-submit-btn-id" onclick="decrypt()">Decrypt</button>
+        <textarea class="dec-output block fixed" id="dec-output-id" readonly rows="4" cols="50" placeholder="Decrypted text..."></textarea>
+    </div>
+</div>
+<!--End of Main Block-->
+<script src="script.js"></script>
+</body>
+</html>
